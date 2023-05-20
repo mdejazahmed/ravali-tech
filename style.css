@@ -2,7 +2,13 @@
   margin: 0;
   box-sizing: border-box;
 }
-.mainContainer {
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.mainContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .navbarContainer {
   background: linear-gradient(to left, #3fd0c9 0%, #2eaf7d 100%);
@@ -23,17 +29,15 @@
   justify-content: space-between;
 }
 .logo {
-  height: 27px;
-  left: 279px;
-  top: 26px;
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 700;
-  font-size: 34px;
-  line-height: 27px;
+  font-size: 2rem;
+  line-height: 25px;
   color: #ffffff;
   cursor: pointer;
 }
+.menuIcon{
+  display: none;
+ }
 .navitemContainer {
   list-style: none;
   display: flex;
@@ -46,11 +50,9 @@
   display: flex;
   align-items: center;
   align-items: center;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
+  font-weight: 500;
+  font-size:1rem;
+  line-height: 16px;
   color: #ffffff;
   cursor: pointer;
 }
@@ -65,6 +67,7 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  width: 100%;
 }
 .heroContainer {
   width: 80%;
@@ -72,7 +75,7 @@
   margin-top: 2rem;
 }
 .heroLeft {
-  width: 50%;
+ width: 50%;
 }
 .carouselItem {
   display: flex;
@@ -81,20 +84,16 @@
   gap: 2rem;
 }
 .heroHeading {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 700;
-  font-size: 45px;
+  font-size: 2.5rem;
   line-height: 54px;
   color: #ffffff;
 }
 .heroPara {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 1rem;
   line-height: 22px;
-
+  font-family: 'Poppins', sans-serif;
   color: #ffffff;
 }
 .heroRight {
@@ -114,10 +113,8 @@
   border: none;
   outline: none;
   cursor: pointer;
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 22px;
   color: white;
   padding: 5px 10px;
@@ -158,25 +155,21 @@
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1rem;
 }
+
 .serviceCardHeading {
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .serviceCardPara {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .serviceRight {
   flex: 8;
-  padding: 1rem;
-}
-.footer {
-  background-color: skyblue;
-}
-.serviceRight {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -185,7 +178,7 @@
 }
 .serviceCard {
   width: 30%;
-  height: 50%;
+  /* height: 50%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -214,13 +207,12 @@
 .serviceCard::after {
   width: 100%;
   height: 100%;
-  background-color: red;
   background: linear-gradient(to left, #3fd0c9 0%, #2eaf7d 100%);
   position: absolute;
   top: 0;
   left: 0;
   z-index: -2;
-  clip-path: circle(20% at 90% 10%);
+  clip-path: circle(35% at 90% 10%);
   transition: 0.3s;
   content: "";
 }
@@ -229,8 +221,11 @@
 }
 .serviceCard:hover p {
   color: white;
-  font-size: 2rem;
+  font-size: 1rem;
   transition: 0.3s;
+}
+.serviceCard:hover .fa-beat{
+  color: white;
 }
 /* about section */
 
@@ -312,5 +307,97 @@
   justify-content: center;
 }
 
-
 /* service section */
+.learnSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+  background-color: ;
+}
+.learnWrapper {
+  width: 80%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+.learnLeft {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.learnHeading {
+  font-size: 2.5rem;
+  color: #022a30;
+}
+.learnDesc {
+  font-size: 1.2rem;
+  color: #258c64;
+}
+.learnRight {
+  width: 50%;
+}
+.learnImg {
+  width: 100%;
+}
+
+@media screen and (max-width:767px) {
+  .logo{
+    font-size: 28px;
+  }
+ .navitemContainer{
+  display: none;
+ }
+ .menuIcon{
+  display: block;
+  color: white;
+  font-size: 28px;
+ }
+ .heroRight{
+  display: none;
+ }
+ .heroLeft{
+  width: 100%;
+ }
+ .serviceWrapper{
+  flex-direction: column;
+  justify-content: space-between;
+ }
+ .serviceLeft{
+  display: none;
+ }.serviceCard{
+  width: 40%;
+ }
+.serviceSection{
+  background-image: none;
+}
+.aboutTop{
+  flex-direction: column;
+}
+.flexTopLeft{
+  width: 100%;
+}
+.flexTopRight{
+  width: 100%;
+}
+.aboutBottom{
+  flex-direction: column;
+}
+.aboutBottomLeft{
+  width: 100%;
+}
+.aboutBottomRight{
+  width: 100%;
+}
+.learnWrapper{
+  flex-direction: column;
+}
+.learnLeft{
+  width: 100%;
+}
+.learnRight{
+  width: 100%;
+}
+}
