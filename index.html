@@ -4,6 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <!-- owl crousel -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -18,12 +41,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&family=Roboto:wght@100;300;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- font awesome -->
     <script
       src="https://kit.fontawesome.com/f973930455.js"
       crossorigin="anonymous"
@@ -39,9 +64,20 @@
             <span class="logo">RAVALI TECH</span>
           </div>
           <div class="menuIcon">
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars" id="menuIcon"></i>
+            <i class="fa-solid fa-xmark d-none" id="crossIcon"></i>
           </div>
           <ul class="navitemContainer">
+            <li class="navItem">Home</li>
+            <li class="navItem">About</li>
+            <li class="navItem">Service +</li>
+            <li class="navItem">Learn & Train</li>
+            <li class="navItem">Carrer</li>
+            <li class="navItem">Blog</li>
+            <li class="navItem">Contact</li>
+          </ul>
+          <!-- mobile navbar -->
+          <ul class="mobileNavContainer d-none" id="mobileNavbar">
             <li class="navItem">Home</li>
             <li class="navItem">About</li>
             <li class="navItem">Service +</li>
@@ -129,23 +165,23 @@
           <div class="serviceRight">
             <div class="serviceCard">
               <i class="fa-solid fa-code fa-beat"></i>
-              <p>Software Development</p>
+              <h3 class="cardName">Software Development</h3>
             </div>
             <div class="serviceCard">
               <i class="fa-solid fa-tv fa-beat"></i>
-              <p>Web Development</p>
+              <h3 class="cardName">Web Development</h3>
             </div>
             <div class="serviceCard">
               <i class="fa-solid fa-mobile fa-beat"></i>
-              <p>Mobile Development</p>
+              <h3 class="cardName">Mobile Development</h3>
             </div>
             <div class="serviceCard">
               <i class="fa-solid fa-globe fa-beat"></i>
-              <p>Digital Marketing</p>
+              <h3 class="cardName">Digital Marketing</h3>
             </div>
             <div class="serviceCard">
               <i class="fa-solid fa-eye fa-beat"></i>
-              <p>Branding</p>
+              <h3 class="cardName">Branding</h3>
             </div>
             <!-- <div class="serviceCard">
             <i class="fa-light fa-file-code"></i>
@@ -250,7 +286,120 @@
           </div>
         </div>
       </section>
+      <!-- end learning section -->
+      <section class="blogSection">
+        <div class="blogWrapper">
+          <h3 class="ourBlog">- Our Blog</h3>
+          <div class="blogContainer">
+            <div class="blogCard">
+              <img
+                class="blogImg"
+                src="https://res.cloudinary.com/dxxh8iica/image/upload/v1684734990/Feb-Business_9_nvjpku.jpg"
+                alt="Why you ned website?"
+              />
+              <div class="cardDetails">
+                <h4 class="blogHeading">
+                  Why digital Marketing Is Important For Small Business?
+                </h4>
+                <p class="blogDesc">
+                  When small businesses get started, their focus is often on how
+                  to get the first customers through the door. They may rely on
+                  traditional forms of...
+                </p>
+                <p class="blogDate">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  2022-10-15 09:18:30
+                </p>
+                <button class="blogBtn">
+                  read more <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+    <!-- end blog section -->
+
+    <footer class="footerSection">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3">
+            <h3 class="footerLogo">RAVALI TECH</h3>
+            <p class="footerPara">
+              Ravali tech is an it solutions company which involves several
+              important stages like generating ideas, idea screening, concept
+              testing, business analysis and market analysis, actual development
+              of the product, test marketing and commercialization.
+            </p>
+            <div class="iconContainer">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h6 class="footerMiniHeading">Our Services</h6>
+            <p class="footerNavItem">
+              <i class="fa-solid fa-chevron-down fa-rotate-270"></i> Software
+              Development
+            </p>
+            <p class="footerNavItem">
+              <i class="fa-solid fa-chevron-down fa-rotate-270"></i>Website
+              Development
+            </p>
+            <p class="footerNavItem">
+              <i class="fa-solid fa-chevron-down fa-rotate-270"></i> Mobile App
+              Development
+            </p>
+            <p class="footerNavItem">
+              <i class="fa-solid fa-chevron-down fa-rotate-270"></i> Digital
+              Marketingt
+            </p>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <h6 class="footerMiniHeading">Other Resources</h6>
+            <p class="footerNavItem">
+              <i class="fa-solid fa-chevron-down fa-rotate-270"></i> About Ust
+            </p>
+            <p class="footerNavItem">
+              <i class="fa-solid fa-chevron-down fa-rotate-270"></i>Learn &
+              Train
+            </p>
+            <p class="footerNavItem">
+              <i class="fa-solid fa-chevron-down fa-rotate-270"></i>Carrer
+            </p>
+            <p class="footerNavItem">
+              <i class="fa-solid fa-chevron-down fa-rotate-270"></i>Blogs
+            </p>
+            <p class="footerNavItem">
+              <i class="fa-solid fa-chevron-down fa-rotate-270"></i>Contact Us
+            </p>
+            <p class="footerNavItem">
+              <i class="fa-solid fa-chevron-down fa-rotate-270"></i>Privacy
+              Policy
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h6 class="footerMiniHeading">Contact Info</h6>
+            <p class="footerNavItem">
+              <i class="fa-solid fa-location-dot locationIcon"></i>Ravali tech 3rd floor,
+              Great Eastern Rd, above Yes bank, opposite Anupam Garden, Geeta
+              Nagar, Choubey Colony, Doongaji Colony, Raipur, Chhattisgarh
+              492001
+            </p>
+            <p class="footerNavItem">
+              <i class="fa-solid fa-phone"></i>+91 82494 62008
+            </p>
+            <p class="footerNavItem">
+              <i class="fa-solid fa-envelope"></i>support@ravalitech.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"

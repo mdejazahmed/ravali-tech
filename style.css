@@ -2,10 +2,10 @@
   margin: 0;
   box-sizing: border-box;
 }
-body{
-  font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
 }
-.mainContainer{
+.mainContainer {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -35,9 +35,9 @@ body{
   color: #ffffff;
   cursor: pointer;
 }
-.menuIcon{
+.menuIcon {
   display: none;
- }
+}
 .navitemContainer {
   list-style: none;
   display: flex;
@@ -45,13 +45,16 @@ body{
   justify-content: flex-end;
   gap: 15px;
 }
+.mobileNavContainer {
+  display: none;
+}
 .navItem {
   height: 78px;
   display: flex;
   align-items: center;
   align-items: center;
   font-weight: 500;
-  font-size:1rem;
+  font-size: 1rem;
   line-height: 16px;
   color: #ffffff;
   cursor: pointer;
@@ -75,7 +78,7 @@ body{
   margin-top: 2rem;
 }
 .heroLeft {
- width: 50%;
+  width: 50%;
 }
 .carouselItem {
   display: flex;
@@ -93,7 +96,7 @@ body{
   font-weight: 500;
   font-size: 1rem;
   line-height: 22px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #ffffff;
 }
 .heroRight {
@@ -178,7 +181,6 @@ body{
 }
 .serviceCard {
   width: 30%;
-  /* height: 50%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -191,9 +193,10 @@ body{
   position: relative;
   z-index: 0;
   overflow: hidden;
+  padding: 1rem;
 }
-.icon {
-  font-size: 4rem;
+.cardName {
+  color: #022a30;
 }
 .serviceCard::before {
   width: 100%;
@@ -212,7 +215,7 @@ body{
   top: 0;
   left: 0;
   z-index: -2;
-  clip-path: circle(35% at 90% 10%);
+  clip-path: circle(20% at 90% 10%);
   transition: 0.3s;
   content: "";
 }
@@ -224,8 +227,17 @@ body{
   font-size: 1rem;
   transition: 0.3s;
 }
-.serviceCard:hover .fa-beat{
+.fa-beat {
+  font-size: 2rem;
+  color: #022a30;
+}
+.serviceCard:hover .fa-beat {
   color: white;
+}
+.serviceCard:hover .cardName {
+  color: white;
+  font-size: 1.2rem;
+  transition: 0.3s;
 }
 /* about section */
 
@@ -273,11 +285,13 @@ body{
 }
 .historyDesc {
   font-size: 1.2rem;
-  color: #258c64;
+  color: #000000;
+  font-weight: 300;
 }
 .whyusListItem {
   font-size: 1.2rem;
-  color: #258c64;
+  color: #000000;
+  font-weight: 300;
 }
 .aboutRight {
   flex: 6;
@@ -312,12 +326,10 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 700px;
-  background-color: ;
+  padding-bottom: 2rem;
 }
 .learnWrapper {
   width: 80%;
-  height: 500px;
   display: flex;
   align-items: center;
 }
@@ -334,7 +346,8 @@ body{
 }
 .learnDesc {
   font-size: 1.2rem;
-  color: #258c64;
+  color: #000000;
+  font-weight: 300;
 }
 .learnRight {
   width: 50%;
@@ -343,61 +356,192 @@ body{
   width: 100%;
 }
 
-@media screen and (max-width:767px) {
-  .logo{
+
+/* blog section */
+.blogWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+background-color: #2eaf7d;
+padding: 2rem;
+}
+.ourBlog{
+  margin-top: 1rem;
+}
+.blogContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.blogCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.blogImg{
+  width: 100%;
+}
+.cardDetails{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:.5rem 1rem;
+}
+.blogHeading{
+  font-size: 23px;
+  text-align: left;
+}
+.blogDesc{
+  font-size: 18px;
+  text-align: left;
+  font-weight: 300;
+}
+.blogBtn{
+  background: linear-gradient(to bottom, #3fd0c9 0%, #2eaf7d 100%);
+  border-radius: 25px 25px 25px 0px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 22px;
+  color: white;
+  padding: 5px 10px;
+}
+/* footer section */
+
+.footerSection{
+background-color: #022a30;
+ color: white;
+}
+.footerLogo{
+  font-weight: 700;
+  font-size:2rem;
+  line-height: 25px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.footerPara{
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 1rem;
+}
+.footerMiniHeading{
+  margin-top:1rem;
+  font-size: 1.5rem;
+}
+.footerNavItem{
+  font-size: 16px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.locationIcon{
+  align-self: flex-start;
+  margin-top: 5px;
+}
+.footerNavItem:hover{
+  color: #2eaf7d;
+  margin-left:5px;
+  font-size: 17px;
+  transition: .2s;
+}
+
+
+@media screen and (max-width: 767px) {
+  .logo {
     font-size: 28px;
   }
- .navitemContainer{
-  display: none;
- }
- .menuIcon{
-  display: block;
-  color: white;
-  font-size: 28px;
- }
- .heroRight{
-  display: none;
- }
- .heroLeft{
-  width: 100%;
- }
- .serviceWrapper{
-  flex-direction: column;
-  justify-content: space-between;
- }
- .serviceLeft{
-  display: none;
- }.serviceCard{
-  width: 40%;
- }
-.serviceSection{
-  background-image: none;
-}
-.aboutTop{
-  flex-direction: column;
-}
-.flexTopLeft{
-  width: 100%;
-}
-.flexTopRight{
-  width: 100%;
-}
-.aboutBottom{
-  flex-direction: column;
-}
-.aboutBottomLeft{
-  width: 100%;
-}
-.aboutBottomRight{
-  width: 100%;
-}
-.learnWrapper{
-  flex-direction: column;
-}
-.learnLeft{
-  width: 100%;
-}
-.learnRight{
-  width: 100%;
-}
+  .navitemContainer {
+    display: none;
+  }
+  .menuIcon {
+    display: block;
+    color: white;
+    font-size: 28px;
+  }
+  .mobileNavContainer{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 78px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding:5px;
+  }
+  .navItem{
+    padding: 1rem 2rem;
+    font-size:1.5rem;
+  }
+  .navItem:hover{
+    background-color:rgba(0, 0, 0, 0.8);
+    border-radius:12px;
+    border: none;
+  }
+  .heroRight {
+    display: none;
+  }
+  .heroLeft {
+    width: 100%;
+  }
+  .serviceWrapper {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .serviceLeft {
+    display: none;
+  }
+  .serviceCard {
+    width: 40%;
+  }
+  .serviceSection {
+    background-image: none;
+  }
+  .aboutTop {
+    flex-direction: column;
+  }
+  .flexTopLeft {
+    width: 100%;
+  }
+  .flexTopRight {
+    width: 100%;
+  }
+  .aboutBottom {
+    flex-direction: column;
+  }
+  .aboutBottomLeft {
+    width: 100%;
+  }
+  .aboutBottomRight {
+    width: 100%;
+  }
+  .learnWrapper {
+    flex-direction: column;
+  }
+  .learnLeft {
+    width: 100%;
+  }
+  .learnRight {
+    width: 100%;
+  }
+  .cardName {
+    font-size: 0.8rem;
+  }
+  .d-none {
+    display: none;
+  }
+  .blogCard{
+    width:100%;
+  }
 }
