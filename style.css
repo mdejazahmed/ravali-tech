@@ -457,7 +457,18 @@ background-color: #022a30;
   font-size: 17px;
   transition: .2s;
 }
-
+.copyRights{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #9AC5BE;
+}
+.copyRightsPara{
+  color: #2eaf7d;
+  font-size: 1.4rem;
+  padding-top: 1rem;
+  font-weight: 300;
+}
 
 @media screen and (max-width: 767px) {
   .logo {
