@@ -45,6 +45,10 @@ body {
   justify-content: flex-end;
   gap: 15px;
 }
+.linkTag{
+  all: unset;
+
+}
 .mobileNavContainer {
   display: none;
 }
@@ -356,26 +360,25 @@ body {
   width: 100%;
 }
 
-
 /* blog section */
-.blogWrapper{
+.blogWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-background-color: #2eaf7d;
-padding: 2rem;
+  background-color: #2eaf7d;
+  padding: 2rem;
 }
-.ourBlog{
+.ourBlog {
   margin-top: 1rem;
 }
-.blogContainer{
+.blogContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
 }
-.blogCard{
+.blogCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -385,26 +388,26 @@ padding: 2rem;
   border-radius: 10px;
   overflow: hidden;
 }
-.blogImg{
+.blogImg {
   width: 100%;
 }
-.cardDetails{
+.cardDetails {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding:.5rem 1rem;
+  padding: 0.5rem 1rem;
 }
-.blogHeading{
+.blogHeading {
   font-size: 23px;
   text-align: left;
 }
-.blogDesc{
+.blogDesc {
   font-size: 18px;
   text-align: left;
   font-weight: 300;
 }
-.blogBtn{
+.blogBtn {
   background: linear-gradient(to bottom, #3fd0c9 0%, #2eaf7d 100%);
   border-radius: 25px 25px 25px 0px;
   border: none;
@@ -415,31 +418,32 @@ padding: 2rem;
   line-height: 22px;
   color: white;
   padding: 5px 10px;
+  margin-bottom: 2rem;
 }
 /* footer section */
 
-.footerSection{
-background-color: #022a30;
- color: white;
+.footerSection {
+  background-color: #022a30;
+  color: white;
 }
-.footerLogo{
+.footerLogo {
   font-weight: 700;
-  font-size:2rem;
+  font-size: 2rem;
   line-height: 25px;
   color: #ffffff;
   cursor: pointer;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
-.footerPara{
+.footerPara {
   font-size: 16px;
   font-weight: 300;
   margin-top: 1rem;
 }
-.footerMiniHeading{
-  margin-top:1rem;
+.footerMiniHeading {
+  margin-top: 1rem;
   font-size: 1.5rem;
 }
-.footerNavItem{
+.footerNavItem {
   font-size: 16px;
   font-weight: 300;
   display: flex;
@@ -447,23 +451,23 @@ background-color: #022a30;
   gap: 4px;
   cursor: pointer;
 }
-.locationIcon{
+.locationIcon {
   align-self: flex-start;
   margin-top: 5px;
 }
-.footerNavItem:hover{
+.footerNavItem:hover {
   color: #2eaf7d;
-  margin-left:5px;
+  margin-left: 5px;
   font-size: 17px;
-  transition: .2s;
+  transition: 0.2s;
 }
-.copyRights{
+.copyRights {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid #9AC5BE;
+  border-top: 1px solid #9ac5be;
 }
-.copyRightsPara{
+.copyRightsPara {
   color: #2eaf7d;
   font-size: 1.4rem;
   padding-top: 1rem;
@@ -482,22 +486,23 @@ background-color: #022a30;
     color: white;
     font-size: 28px;
   }
-  .mobileNavContainer{
+  .mobileNavContainer {
     display: block;
     position: absolute;
     left: 0;
     top: 78px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding:5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 5px;
   }
-  .navItem{
-    padding: 1rem 2rem;
-    font-size:1.5rem;
+  .navItem {
+    padding: 0 1rem;
+    height: 3rem;
+    font-size: 1rem;
   }
-  .navItem:hover{
-    background-color:rgba(0, 0, 0, 0.8);
-    border-radius:12px;
+  .navItem:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
     border: none;
   }
   .heroRight {
@@ -505,6 +510,9 @@ background-color: #022a30;
   }
   .heroLeft {
     width: 100%;
+  }
+  .aboutHeading6{
+  align-self: flex-start;
   }
   .serviceWrapper {
     flex-direction: column;
@@ -552,7 +560,7 @@ background-color: #022a30;
   .d-none {
     display: none;
   }
-  .blogCard{
-    width:100%;
+  .blogCard {
+    width: 100%;
   }
 }
